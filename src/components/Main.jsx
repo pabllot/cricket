@@ -13,17 +13,21 @@ import { useState } from 'react'
 
 
 const Main = () => {
-    const [diceOne, setDiceOne] = useState(undefine);
-    const [diceTwo, setDiceTwo] = useState(undefine);
-    const [prevDiceOne, setPrevDiceOne] = useState(undefine);
+    const [diceOne, setDiceOne] = useState(one);
+    const [diceTwo, setDiceTwo] = useState(two);
+    const [questionOne, setQuestionOne] = useState(undefine);
     const [prevDiceTwo, setPrevDiceTwo] = useState(undefine);
     const [numOne, setNumOne] = useState(six);
     const [numTwo, setNumTwo] = useState(six);
+    const [show, setShow] = useState(false)
+    const [showBtn, setShowBtn] = useState(false)
+    const [showA, setShowA] = useState(true)
+    const [showD, setShowD] = useState(true)
     
     
     const magic = () => {
-        setNumOne(Math.floor(Math.random() * 6))
-        setNumTwo(Math.floor(Math.random() * 6))
+        setNumOne(Math.floor(Math.random() * 6));
+        setNumTwo(Math.floor(Math.random() * 6));
 
         if (numOne === 0) setDiceOne(one);
         else if (numOne === 1) setDiceOne(two);
@@ -38,28 +42,45 @@ const Main = () => {
         else if (numTwo === 3) setDiceTwo(four);
         else if (numTwo === 4) setDiceTwo(five);
         else if (numTwo === 5) setDiceTwo(six);
+
+        setTimeout(() => {
+            setShow(true)
+          }, 3000)
+
+        setShowBtn(true)
+        setShowA(false)
+        setShowD(false)
     }
 
     const accepted = () => {
-        setPrevDiceOne(diceOne);
-        setPrevDiceTwo(diceTwo);
+        setShow(prev => !prev)
+        setShowBtn(false) 
+        setShowA(true)
+        setShowD(true)
+    }
+    const doubted = () => {
+        setDiceOne(undefine);
+        setDiceTwo(undefine);
+        setShowBtn(false);  
+        setShowA(true)
+        setShowD(true)       
 
-        setDiceOne(undefine)
-        setDiceTwo(undefine)
     }
 
   return (
     <div className='container'>
-        <div className='prev'>
-            <img src={prevDiceOne} />
-            <img src={prevDiceTwo} />
-        </div>
+
         <div className='current'>
             <img src={diceOne} />
             <img src={diceTwo} />
         </div>
-        <button onClick={magic}>jogar</button>
-        <button onClick={accepted}>aceitou</button>
+        <div className={`undef ${show ? '' : 'hidden'}`}>
+            <img src={undefine} />
+            <img src={undefine} />
+        </div>
+        <button className={!showBtn ? '' : 'hidden'} onClick={magic}>jogar</button>
+        <button className={!showA ? '' : 'hidden'} onClick={accepted}>aceitou</button>
+        <button className={!showD ? '' : 'hidden'} onClick={doubted}>duvidou</button>
     </div>
   )
 }
