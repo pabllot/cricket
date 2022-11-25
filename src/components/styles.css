@@ -1,0 +1,26 @@
+.container {
+    width: 700;
+    height: 100vh;  
+    background-color: white;
+}
+
+.prev  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    
+}
+
+.prev > img {
+    width: 40px;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
