@@ -38,7 +38,6 @@ const Main = () => {
 
     }, [numOne, numTwo]);
 
-
     const play = () => {
         setNumOne(Math.floor(Math.random() * 6));
         setNumTwo(Math.floor(Math.random() * 6));
@@ -77,9 +76,9 @@ const Main = () => {
             <img src={undef} />
             <img src={undef} />
         </div>
-        <button className={!showPlay ? '' : 'hidden'} onClick={play}>Play</button>
-        <button className={!showAccept ? '' : 'hidden'} onClick={accepted}>Accept</button>
-        <button className={!showDefy ? '' : 'hidden'} onClick={doubted}>Defy</button>
+        <button className={`btn ${!showPlay ? '' : 'hidden'}`} onClick={play}>Play</button>
+        <button className={`btn ${!showAccept ? '' : 'hidden'}`}onClick={accepted}>Accept</button>
+        <button className={`btn ${!showDefy ? '' : 'hidden'}`} onClick={doubted}>Defy</button>
     </Container>
   )
 }
