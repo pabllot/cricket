@@ -35,6 +35,7 @@ const Main = () => {
         setNumOne(Math.floor(Math.random() * 6));
         setNumTwo(Math.floor(Math.random() * 6));
 
+
         setTimeout(() => {
             setShowDice(true)
           }, 2000)
@@ -47,10 +48,10 @@ const Main = () => {
     const accepted = () => {
         setDiceOne(<Question />);
         setDiceTwo(<Question />);
-        setShowDice(false)
         setShowPlay(false) 
         setShowAccept(true)
         setShowDefy(true)
+        setShowDice(false)
     };
 
     const doubted = () => {

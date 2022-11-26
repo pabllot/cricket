@@ -19,7 +19,6 @@ export const Container = styled.div`
 
     .undef {
         position: absolute;
-        top:38%;
         display: flex;
         gap: 10px;
     }
@@ -37,7 +36,7 @@ export const Container = styled.div`
         cursor: pointer;
         font-family: 'Poppins', sans-serif;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 24px;
         opacity: 1;
         outline: 0 solid transparent;
@@ -58,5 +57,15 @@ export const Container = styled.div`
             align-items: center;
             justify-content: center;
             gap: 60px;
+            bottom: 30%;
+            position: absolute;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+            margin-bottom: 40px;
+            color: #f1f1f1c8;
+            font-weight: 300;
         }
 `;
