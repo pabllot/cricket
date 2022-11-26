@@ -8,6 +8,8 @@ background: black;
 display: grid;
 align-items: center;
 grid-template-columns: 1fr 1fr;
+border: 2px solid white;
+
 
 .diceSix {
     width: 23px;

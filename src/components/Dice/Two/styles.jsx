@@ -9,6 +9,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
+border: 2px solid white;
+
 
 .diceUp {
     width: 23px;
