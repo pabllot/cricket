@@ -13,6 +13,7 @@ border: 2px solid white;
 
 .question {
     color: wheat;
+    font-family: 'Roboto', sans-serif;
     font-size: 7rem;
 }
 `

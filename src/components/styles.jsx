@@ -1,10 +1,14 @@
 import styled from "styled-components"
 
+
 export const Container = styled.div`
-    width: 700;
     height: 100vh;  
     background-color: blue;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .current {
     display: flex;
@@ -15,7 +19,7 @@ export const Container = styled.div`
 
     .undef {
         position: absolute;
-        top:0;
+        top:38%;
         display: flex;
         gap: 10px;
     }
@@ -25,12 +29,13 @@ export const Container = styled.div`
     }
 
     .btn {
-        background: #5E5DF0;
-        border-radius: 999px;
-        box-shadow: #5E5DF0 0 10px 20px -10px;
+        background: #fafafa;
+        border-radius: 25px;
+        box-shadow: #000000 0 4px 20px -10px;
         box-sizing: border-box;
-        color: #FFFFFF;
+        color: #000000;
         cursor: pointer;
+        font-family: 'Poppins', sans-serif;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -45,5 +50,13 @@ export const Container = styled.div`
         border: 0;
         margin-right: 4px; ////////// change to gap
         margin-top: 2px;
+        }
+
+        .btnWrapper {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
         }
 `;

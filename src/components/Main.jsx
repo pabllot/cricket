@@ -1,8 +1,6 @@
 import React, { useState, useEffect} from 'react'
 
 import { Container } from './styles'
-
-import six from '../assets/six.png'
 import { One, Two, Three, Four, Five, Six, Question } from '../components/Dice/Export'
 
 
@@ -47,15 +45,16 @@ const Main = () => {
     };
 
     const accepted = () => {
-        setShowDice(prev => !prev)
+        setDiceOne(<Question />);
+        setDiceTwo(<Question />);
+        setShowDice(false)
         setShowPlay(false) 
         setShowAccept(true)
         setShowDefy(true)
     };
 
     const doubted = () => {
-        setDiceOne(<Question />);
-        setDiceTwo(<Question />);
+        setShowDice(false)
         setShowPlay(false);  
         setShowAccept(true)
         setShowDefy(true)       
@@ -71,10 +70,12 @@ const Main = () => {
             <Question />
             <Question />
         </div>
-    
-        <button className={`btn ${!showPlay ? '' : 'hidden'}`} onClick={play}>Play</button>
-        <button className={`btn ${!showAccept ? '' : 'hidden'}`}onClick={accepted}>Accept</button>
-        <button className={`btn ${!showDefy ? '' : 'hidden'}`} onClick={doubted}>Defy</button>
+
+        <div className='btnWrapper'>
+            <button className={`btn ${!showPlay ? '' : 'hidden'}`} onClick={play}>Play</button>
+            <button className={`btn ${!showAccept ? '' : 'hidden'}`}onClick={accepted}>Accept</button>
+            <button className={`btn ${!showDefy ? '' : 'hidden'}`} onClick={doubted}>Dare</button>
+        </div>
     </Container>
   )
 }
