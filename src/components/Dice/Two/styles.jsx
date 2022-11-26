@@ -17,13 +17,15 @@ border: 2px solid white;
     height: 23px;
     border-radius: 50%;
     background: wheat;
-    margin-left: 4rem;
+    margin-left: 3.4rem;
+    margin-top: 1.2rem;
 }
 .diceDown {
     width: 23px;
     height: 23px;
     border-radius: 50%;
     background: wheat;
-    margin-right: 4rem;
+    margin-right: 3.4rem;
+    margin-bottom: 1.2rem;
 }
 `
