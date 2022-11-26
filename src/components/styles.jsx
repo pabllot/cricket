@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
     width: 700;
     height: 100vh;  
-    background-color: white;
+    background-color: blue;
     position: relative;
 
     .current {
