@@ -5,7 +5,7 @@ import { Container } from './styles'
 const One = () => {
   return (
     <Container>
-        <div className='diceSix'></div>
+        <div className='diceOne'></div>
    
     </Container>
   )

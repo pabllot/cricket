@@ -9,9 +9,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-.diceSix {
-    width: 20px;
-    height: 20px;
+.diceOne {
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     background: wheat;
 }

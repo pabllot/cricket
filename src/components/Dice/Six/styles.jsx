@@ -10,8 +10,8 @@ align-items: center;
 grid-template-columns: 1fr 1fr;
 
 .diceSix {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     background: wheat;
     margin-left: 25px;
