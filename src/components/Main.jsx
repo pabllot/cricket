@@ -2,46 +2,34 @@ import React, { useState, useEffect} from 'react'
 
 import { Container } from './styles'
 
-import undef from '../assets/undefined.png'
-import one from '../assets/one.png'
-import two from '../assets/two.png'
-import three from '../assets/three.png'
-import four from '../assets/four.png'
-import five from '../assets/five.png'
 import six from '../assets/six.png'
-import Six from './Dice/Six/Six'
-import One from './Dice/One/One'
-import Two from './Dice/Two/Two'
-import Three from './Dice/Three/Three'
-import Four from './Dice/Four/Four'
-import Five from './Dice/Five/Five'
-import Question from './Dice/Question/Question'
+import { One, Two, Three, Four, Five, Six, Question } from '../components/Dice/Export'
 
 
 const Main = () => {
-    const [diceOne, setDiceOne] = useState(undef);
-    const [diceTwo, setDiceTwo] = useState(undef);
-    const [numOne, setNumOne] = useState(six);
-    const [numTwo, setNumTwo] = useState(six);
+    const [diceOne, setDiceOne] = useState(<Question />);
+    const [diceTwo, setDiceTwo] = useState(<Question />);
+    const [numOne, setNumOne] = useState('');
+    const [numTwo, setNumTwo] = useState('');
     const [showDice, setShowDice] = useState(false)
     const [showPlay, setShowPlay] = useState(false)
     const [showAccept, setShowAccept] = useState(true)
     const [showDefy, setShowDefy] = useState(true)
     
     useEffect(() => {
-        if (numOne === 0) setDiceOne(one);
-        else if (numOne === 1) setDiceOne(two);
-        else if (numOne === 2) setDiceOne(three);
-        else if (numOne === 3) setDiceOne(four);
-        else if (numOne === 4) setDiceOne(five);
-        else if (numOne === 5) setDiceOne(six);
+        if (numOne === 0) setDiceOne(<One />);
+        else if (numOne === 1) setDiceOne(<Two />);
+        else if (numOne === 2) setDiceOne(<Three />);
+        else if (numOne === 3) setDiceOne(<Four />);
+        else if (numOne === 4) setDiceOne(<Five />);
+        else if (numOne === 5) setDiceOne(<Six />);
     
-        if (numTwo === 0) setDiceTwo(one);
-        else if (numTwo === 1) setDiceTwo(two);
-        else if (numTwo === 2) setDiceTwo(three);
-        else if (numTwo === 3) setDiceTwo(four);
-        else if (numTwo === 4) setDiceTwo(five);
-        else if (numTwo === 5) setDiceTwo(six);
+        if (numTwo === 0) setDiceTwo(<One />);
+        else if (numTwo === 1) setDiceTwo(<Two />);
+        else if (numTwo === 2) setDiceTwo(<Three />);
+        else if (numTwo === 3) setDiceTwo(<Four />);
+        else if (numTwo === 4) setDiceTwo(<Five />);
+        else if (numTwo === 5) setDiceTwo(<Six />);
 
     }, [numOne, numTwo]);
 
@@ -66,8 +54,8 @@ const Main = () => {
     };
 
     const doubted = () => {
-        setDiceOne(undef);
-        setDiceTwo(undef);
+        setDiceOne(<Question />);
+        setDiceTwo(<Question />);
         setShowPlay(false);  
         setShowAccept(true)
         setShowDefy(true)       
@@ -76,23 +64,17 @@ const Main = () => {
   return (
     <Container>
         <div className='current'>
-            <img src={diceOne} />
-            <img src={diceTwo} />
+            {diceOne}
+            {diceTwo}
         </div>
-        <div className={`undef ${showDice ? '' : 'hidden'}`}>
-            <img src={undef} />
-            <img src={undef} />
+        <div className={`undef ${!showDice ? 'hidden' : ''}`}>
+            <Question />
+            <Question />
         </div>
+    
         <button className={`btn ${!showPlay ? '' : 'hidden'}`} onClick={play}>Play</button>
         <button className={`btn ${!showAccept ? '' : 'hidden'}`}onClick={accepted}>Accept</button>
         <button className={`btn ${!showDefy ? '' : 'hidden'}`} onClick={doubted}>Defy</button>
-        <One />
-        <Two />
-        <Three />
-        <Four />
-        <Five />
-        <Six />
-        <Question />
     </Container>
   )
 }
