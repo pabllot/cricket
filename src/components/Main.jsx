@@ -14,6 +14,8 @@ import One from './Dice/One/One'
 import Two from './Dice/Two/Two'
 import Three from './Dice/Three/Three'
 import Four from './Dice/Four/Four'
+import Five from './Dice/Five/Five'
+import Question from './Dice/Question/Question'
 
 
 const Main = () => {
@@ -87,8 +89,10 @@ const Main = () => {
         <One />
         <Two />
         <Three />
-        <Six />
         <Four />
+        <Five />
+        <Six />
+        <Question />
     </Container>
   )
 }
