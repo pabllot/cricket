@@ -9,6 +9,7 @@ import three from '../assets/three.png'
 import four from '../assets/four.png'
 import five from '../assets/five.png'
 import six from '../assets/six.png'
+import Dice from './Dice/Dice'
 
 
 const Main = () => {
@@ -79,6 +80,7 @@ const Main = () => {
         <button className={`btn ${!showPlay ? '' : 'hidden'}`} onClick={play}>Play</button>
         <button className={`btn ${!showAccept ? '' : 'hidden'}`}onClick={accepted}>Accept</button>
         <button className={`btn ${!showDefy ? '' : 'hidden'}`} onClick={doubted}>Defy</button>
+        <Dice />
     </Container>
   )
 }
