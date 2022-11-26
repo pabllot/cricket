@@ -13,6 +13,7 @@ import Six from './Dice/Six/Six'
 import One from './Dice/One/One'
 import Two from './Dice/Two/Two'
 import Three from './Dice/Three/Three'
+import Four from './Dice/Four/Four'
 
 
 const Main = () => {
@@ -87,6 +88,7 @@ const Main = () => {
         <Two />
         <Three />
         <Six />
+        <Four />
     </Container>
   )
 }
