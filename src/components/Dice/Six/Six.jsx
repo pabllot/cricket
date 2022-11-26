@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container } from './styles'
 
-const Dice = () => {
+const Six = () => {
   return (
     <Container>
         <div className='diceSix'></div>
@@ -15,4 +15,4 @@ const Dice = () => {
   )
 }
 
-export default Dice
+export default Six
