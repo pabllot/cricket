@@ -68,4 +68,8 @@ export const Container = styled.div`
             color: #f1f1f1c8;
             font-weight: 300;
         }
+
+        .opacityBtn {
+            opacity: 0.2;
+        }
 `;

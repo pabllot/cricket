@@ -74,8 +74,8 @@ const Main = () => {
 
         <div className='btnWrapper'>
             <button className={`btn ${!showPlay ? '' : 'hidden'}`}  onClick={play}>Play</button>
-            <button className={`btn ${!showAccept ? '' : 'hidden'}`} disabled={!showDice ? true : false} onClick={accepted}>Accept</button>
-            <button className={`btn ${!showDefy ? '' : 'hidden'}`} disabled={!showDice ? true : false} onClick={doubted}>Dare</button>
+            <button className={`btn ${!showAccept ? '' : 'hidden'} ${!showDice ? 'opacityBtn' : ''}`} disabled={!showDice ? true : false} onClick={accepted}>Accept</button>
+            <button className={`btn ${!showDefy ? '' : 'hidden'}  ${!showDice ? 'opacityBtn' : ''}`} disabled={!showDice ? true : false} onClick={doubted}>Dare</button>
         </div>
     </Container>
   )
